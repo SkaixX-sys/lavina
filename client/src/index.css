@@ -1,0 +1,160 @@
+* {
+  font-family: 'vocal';
+}
+
+:root {
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@font-face {
+  font-family: 'vocal';
+  src: local('vocal'), url(./fonts/vocal/Vocal-ExtraBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Standart CT';
+  src: local('vocal'), url(./fonts/e1b8c7e4befef386f0d0fce20c27a140.woff2) format('woff2');
+}
+
+.color-black {
+  color: black;
+}
+
+.color-white {
+  color: white;
+}
+
+.bg-none {
+  background-color: #00000000;
+}
+
+.border-none {
+  border: none;
+}
+
+h3 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.custom-button-yellow {
+  display: flex;
+  justify-content: center;
+  background: #FFD600;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: left;
+  white-space: nowrap;
+
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.size12 {
+  font-size: 12px;
+}
+
+.size14 {
+  font-size: 14px;
+}
+
+.size24 {
+  font-size: 24px;
+}
+
+.size32 {
+  font-size: 32px;
+}
+
+.size40 {
+  font-size: 40px;
+}
+
+.size48 {
+  font-size: 48px;
+}
+
+.size56 {
+  font-size: 56px;
+}
+
+.size64 {
+  font-size: 64px;
+}
+
+.size72 {
+  font-size: 72px;
+}
+
+.size80 {
+  font-size: 5vw;
+}
+
+.letter3 {
+  letter-spacing: 0.03em;
+}
+
+.letter15 {
+  letter-spacing: 0.15em;
+}
+.image {
+  min-width: 100vh;
+}
+
+

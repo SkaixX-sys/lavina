@@ -1,0 +1,15 @@
+{
+  "name": "lavina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "n",
+  "homepage": "https://skaixx-sys.github.io/lavina/",
+  "scripts": {
+    "client": "cd client && vite",
+    "server": "cd server && nodemon index.js",
+    "deployclient": "cd client && npm run deploy",
+    "deploy": "cd client && gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC"
+}
