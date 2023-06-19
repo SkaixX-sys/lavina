@@ -29,7 +29,6 @@ class newsController {
       }
       return res.json(news);
     } catch (e) {
-      return next(ApiError.internal(e))
       return next(ApiError.internal("Ошибка сервера"));
     }
   }

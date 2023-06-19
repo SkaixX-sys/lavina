@@ -49,24 +49,32 @@ const RoomPage = observer(() => {
           <p>Будний день: {info.weekdayOldPrice} руб. в день</p>
           <p>Выходной день: {info.weekendOldPrice} руб. в день</p>
           {user.isAuth && (
-            <Button
-              variant="primary"
+            <div
               onClick={() => {
                 setShowModal(true);
                 setEdit(false);
               }}
             >
+              <img
+              className="mt-3 mb-3 me-3"
+              src="../../../src/assets/icons/arrowToButton.png"
+              alt="arrow"
+            />
               Редактировать данные
-            </Button>
+            </div>
           )}
-          <Button
-            variant="primary"
+          <div
             onClick={() => {
               setFeedBackModal(true);
             }}
           >
+            <img
+              className="mt-3 mb-3 me-3"
+              src="../../../src/assets/icons/arrowToButton.png"
+              alt="arrow"
+            />
             Оставить данные
-          </Button>
+          </div>
         </Col>
       </Row>
       <FeedBackModal

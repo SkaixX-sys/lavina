@@ -58,12 +58,12 @@ const Rooms = observer(() => {
 
   return (
     <div className="services">
-      <h2 className="text-center m-4">Комнаты {hotelDetails.title}</h2>
+      <h2 className="text-center m-4">{hotelDetails.title}</h2>
       <Container>
         <Row>
           <Col>
             <Image src={ import.meta.env.VITE_APP_API_URL + "/" + hotelDetails.image} alt={hotelDetails.title} className="w-100"/>
-            <p className="p-4">{hotelDetails.description}</p>
+            <p className="p-4 w-50">{hotelDetails.description}</p>
           </Col>
         </Row>
       </Container>

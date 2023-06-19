@@ -1,5 +1,7 @@
 import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button, Nav } from 'react-bootstrap';
+import { SERVICES_ROUTER } from '../utils/consts';
+import { NavLink } from 'react-router-dom';
 
 function StartFly() {
   return (
@@ -7,9 +9,9 @@ function StartFly() {
       <Col md={3} className='d-flex flex-column align-content-start'>
         <h3 className='display-5' style={{fontWeight:'700'}}>Катайся как <br></br>Хочешь, на <br></br>Наших<br></br> Склонах</h3>
         <p className='mt-5 mb-5'>Наши подъемники смогут доставить вас практически на любую высоту.</p>
-        <div variant="" className="d-flex align-content-center">
+        <NavLink to={SERVICES_ROUTER} className="d-flex align-content-center">
            <img className='me-3' src="./src/assets/icons/arrowToButton.png" alt="arrow" />Начать Летать
-        </div>
+        </NavLink>
       </Col>
       <Col md={1}></Col>
       <Col md={7}>

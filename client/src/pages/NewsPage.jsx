@@ -1,35 +1,38 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Container, Row, Col, Image, Badge, Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
-import { observer } from 'mobx-react-lite';
-import { Context } from '../main';
-import { getNew } from '../http/newsAPI';
-import AddPutNewsModal from '../components/modal/AddPutNewsModal';
+import React, { useContext, useEffect, useState } from "react";
+import { Container, Row, Col, Image, Badge, Button } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { observer } from "mobx-react-lite";
+import { Context } from "../main";
+import { getNew } from "../http/newsAPI";
+import AddPutNewsModal from "../components/modal/AddPutNewsModal";
 
 const NewsPage = observer(() => {
-  const { user } = useContext(Context)
-  const { id } = useParams()
-  const [showModal, setShowModal] = useState(false)
-  const [edit, setEdit] = useState(false)
-  const [oneNew, setOneNew] = useState('')
+  const { user } = useContext(Context);
+  const { id } = useParams();
+  const [showModal, setShowModal] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [oneNew, setOneNew] = useState("");
 
   const fetchOneNew = async () => {
     try {
-      const news = await getNew(id)
-      setOneNew(news)
+      const news = await getNew(id);
+      setOneNew(news);
     } catch (e) {
-      throw (e)
+      throw e;
     }
-  }
+  };
 
   useEffect(() => {
-    fetchOneNew()
-  }, [])
+    fetchOneNew();
+  }, []);
   return (
-    <Container className='mt-5'>
+    <Container className="mt-5">
       <Row>
         <Col>
-          <Image src={import.meta.env.VITE_APP_API_URL + '/' + oneNew.image} fluid />
+          <Image
+            src={import.meta.env.VITE_APP_API_URL + "/" + oneNew.image}
+            fluid
+          />
         </Col>
         <Col>
           <h2>{oneNew.title}</h2>
@@ -37,15 +40,33 @@ const NewsPage = observer(() => {
           <hr />
           <h4>Новость:</h4>
           <p>{oneNew.text}</p>
-          {user.isAuth && <Button variant="primary" onClick={() => {
-            setShowModal(true)
-            setEdit(true)
-          }}>Редактировать данные</Button>}
+          {user.isAuth && (
+            <div
+              onClick={() => {
+                setShowModal(true);
+                setEdit(true);
+              }}
+            >
+              {" "}
+              <img
+                className="me-3"
+                src="../../src/assets/icons/arrowToButton.png"
+                alt="arrow"
+              />
+              Редактировать данные
+            </div>
+          )}
         </Col>
       </Row>
-      <AddPutNewsModal show={showModal} onHide={() => setShowModal(false)} onAddOrPutNews={fetchOneNew} edit={edit} newsId={oneNew.id} />
+      <AddPutNewsModal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        onAddOrPutNews={fetchOneNew}
+        edit={edit}
+        newsId={oneNew.id}
+      />
     </Container>
   );
-})
+});
 
-export default NewsPage
+export default NewsPage;

@@ -6,8 +6,8 @@ import { createPrice, updatePrice } from '../../http/servicePriceAPI'
 const CreateUpdatePrice = ({ show, onHide, onAddServiceType, edit, idTraffic }) => {
     const { type } = useParams()
     const [period, setPeriod] = useState('')
-    const [weekendNewPrice, setWeekendNewPrice] = useState(0)
-    const [weekdayNewPrice, setWeekdayNewPrice] = useState(0)
+    const [weekendNewPrice, setWeekendNewPrice] = useState(null)
+    const [weekdayNewPrice, setWeekdayNewPrice] = useState(null)
 
 
     const addServiceType = async () => {

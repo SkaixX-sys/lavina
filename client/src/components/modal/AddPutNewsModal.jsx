@@ -23,8 +23,8 @@ const AddPutNewsModal = ({ show, onHide, onAddOrPutNews, edit, newsId }) => {
         formData.append('type', title);
         formData.append('image', file);
         formData.append('description', description);
-        formData.append('infoId', 1);
-        formData.append('text', "text");
+        formData.append('infoId', 6);
+        formData.append('text', text);
 
         if (!edit) {
             try {

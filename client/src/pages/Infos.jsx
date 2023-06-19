@@ -41,7 +41,7 @@ const Infos = observer(() => {
       await deleteInfo(id);
       fetchServiceTypes();
     } catch (error) {
-      alert(error);
+      alert(error.response.data.message);
     }
   };
 
